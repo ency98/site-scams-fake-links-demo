@@ -1,0 +1,26 @@
+---
+name: nginx-site-encyapps
+services:
+  fake-encyapps:
+    image: nginx:latest
+    container_name: ws-fake-encyapps
+
+    restart: always
+
+    ports:
+      - '3916:80'
+
+    volumes:
+      - ./appdata/scam-links:/usr/share/nginx/html:ro
+
+    networks:
+      - frontend
+      - web-servers
+
+#----------------------------------------------------------
+
+networks:
+  frontend:
+    external: true
+  web-servers:
+    external: true
