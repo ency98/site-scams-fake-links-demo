@@ -8,10 +8,10 @@ services:
     restart: always
 
     ports:
-      - '1211:80'
+      - '${PORT}:80'
 
     volumes:
-      - ./site/scam-links:/usr/share/nginx/html:ro
+      - ../appdata/site-scams-fake-links:/usr/share/nginx/html:ro
 
     networks:
       - frontend

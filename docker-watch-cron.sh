@@ -6,8 +6,8 @@
 # CONTAINER: Container name to watch.
 # DIR: Path to container compose file
 
-export CONTAINER="nginx-fake-encyapps"
-export DIR="/mnt/docker/nginx-site-fake-encyapps"
+export CONTAINER="site-scams-encyapps-com"
+export DIR="/mnt/docker/site-scams-encyapps-com"
 
 
 status=$(docker inspect -f '{{.State.Status}}' "$CONTAINER" 2>/dev/null || true)
